@@ -1,0 +1,135 @@
+html,
+body {
+    font-family: "DejaVu Sans", Verdana, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #dcf5ff;
+}
+
+#sidebar {
+    left: 12px;
+    top: 12px;
+    width: 350px;
+    max-height: calc(100% - 24px);
+    overflow-y: auto;
+}
+
+.box {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px dashed #999;
+    z-index: 9999;
+}
+
+#header {
+    top: 0;
+    position: sticky;
+}
+
+#title {
+    font-weight: bold;
+    text-align: center;
+    background-color: #ffe4bf;
+    cursor: pointer;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+#title button {
+    height: 100%;
+    font-family: monospace;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#error {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    background-color: #FF9999;
+}
+
+#expandable {
+    display: none;
+    margin-top: 5px;
+    font-size: 14px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+}
+
+table {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+table.filters td {
+    text-align: center;
+}
+
+#pi {
+    text-transform: uppercase;
+}
+
+.filter_off {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: large;
+    user-select: none;
+}
+
+hr {
+    border: none;
+    border-top: 1px dashed #999;
+    color: #fff;
+    background-color: #fff;
+    height: 1px;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#status {
+    width: 100%;
+    text-align: center;
+}
+
+#help {
+    margin-left: auto;
+    margin-right: auto;
+    width: 310px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#copyright {
+    margin-top: 5px;
+    margin-bottom: 2px;
+    text-align: center;
+    font-size: small;
+}
+
+#progress {
+    width: calc(100% - 5px);
+    text-align: center;
+    height: 1em;
+    z-index: 100;
+}

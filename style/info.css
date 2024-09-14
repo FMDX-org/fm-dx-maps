@@ -1,0 +1,13 @@
+#info {
+    display: none;
+    top: auto;
+    bottom: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    padding: 5px;
+    text-align: center;
+    z-index: 10000 !important;
+    width: fit-content;
+}

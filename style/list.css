@@ -1,0 +1,84 @@
+table.list {
+    text-align: left;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+table.list thead {
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+table.list tbody {
+    font-size: 12px;
+}
+
+table.list tbody label {
+    cursor: pointer;
+}
+
+table.list tbody tr {
+    background-color: #dffbbc;
+}
+
+table.list tbody tr:hover {
+    background-color: white;
+}
+
+table.list td,
+table.list th {
+    border: 1px solid #DDD;
+}
+
+table.list tr:first-child th {
+    border-top: 0;
+}
+
+table.list tr:last-child td {
+    border-bottom: 0;
+}
+
+table.list tr td:first-child,
+table.list tr th:first-child {
+    border-left: 0;
+}
+
+table.list tr td:last-child,
+table.list tr th:last-child {
+    border-right: 0;
+}
+
+.location {
+    background-color: #ffffe6 !important;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.erp {
+    text-align: right;
+    font-family: monospace;
+}
+
+.pi {
+    text-align: center;
+    font-family: monospace;
+}
+
+.txradius {
+    font-size: smaller;
+    text-align: center;
+}
+
+.filtered {
+    background-color: #ffe4bf !important;
+}
+
+.invisible {
+    background-color: #E9E9E9 !important;
+}
+
+.inactive {
+    text-decoration: line-through;
+}
