@@ -125,7 +125,7 @@
             </div>
         </div>
 
-        <div id="copyright"><a href="http://fmdx.pl" target="_blank"><img style="vertical-align: middle;" alt="))((" src="img/logo.png" /> FMDX.pl</a><span id="source"></span></div>
+        <div id="copyright"><a href="http://fmdx.org" target="_blank">FMDX.org</a><span id="source"></span></div>
 
         <progress id="progress"></progress>
     </div>
