@@ -45,7 +45,7 @@ const map =
                 const marker = new L.CanvasIconMarker([entry.lat, entry.lon], {
                     icon: icons.getIcon(entry['maxerp'], selection.contains(id), entry['inactive'])
                 });
-                marker.bindTooltip(this.tooltip);
+                marker.bindTooltip(this.tooltip, { direction: 'bottom', offset: [0, 2] });
                 marker.on('mousedown', function (e)
                 {
                     switch (e.originalEvent.button)
