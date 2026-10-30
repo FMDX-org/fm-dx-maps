@@ -18,14 +18,14 @@
     <script type="text/javascript" src="script/clipboard.js?rev=20240310"></script>
     <script type="text/javascript" src="script/fetch.js?rev=20240310"></script>
     <script type="text/javascript" src="script/dataset.js?rev=20240312"></script>
-    <script type="text/javascript" src="script/icons.js?rev=20240310"></script>
+    <script type="text/javascript" src="script/icons.js?rev=20261030"></script>
     <script type="text/javascript" src="script/frequency.js?rev=20240310"></script>
     <script type="text/javascript" src="script/geoloc.js?rev=20240310"></script>
     <script type="text/javascript" src="script/selection.js?rev=20240310"></script>
     <script type="text/javascript" src="script/paths.js?rev=20240310"></script>
     <script type="text/javascript" src="script/tiles.js?rev=20240310"></script>
     <script type="text/javascript" src="script/coverage.js?rev=20240310"></script>
-    <script type="text/javascript" src="script/map.js?rev=20240724"></script>
+    <script type="text/javascript" src="script/map.js?rev=20261030"></script>
     <script type="text/javascript" src="script/map-share.js?rev=20240310"></script>
     <script type="text/javascript" src="script/list.js?rev=20240310"></script>
     <script type="text/javascript" src="script/app.js?rev=20240724"></script>

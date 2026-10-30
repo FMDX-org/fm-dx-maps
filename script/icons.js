@@ -1,5 +1,50 @@
 "use strict";
 
+L.CanvasIconMarker = L.CircleMarker.extend({
+    options: {
+        renderer: L.canvas({ pane: 'markerPane' })
+    },
+
+    setIcon: function(icon)
+    {
+        this.options.icon = icon;
+        return this.redraw();
+    },
+
+    _updateBounds: function()
+    {
+        const o = this.options.icon.options;
+        const topLeft = this._point.subtract(o.iconAnchor);
+        this._pxBounds = L.bounds(topLeft, topLeft.add(o.iconSize));
+    },
+
+    _containsPoint: function(p)
+    {
+        return this._pxBounds.contains(p);
+    },
+
+    _updatePath: function()
+    {
+        if (!this._renderer._drawing || this._empty())
+            return;
+
+        const o = this.options.icon.options;
+        const img = o.img || (o.img = Object.assign(new Image(), { src: o.iconUrl }));
+
+        if (!img.complete)
+        {
+            img.addEventListener('load', () => this.redraw(), { once: true });
+            return;
+        }
+
+        if (img.naturalWidth)
+        {
+            const p = this._pxBounds.min;
+            this._renderer._ctx.drawImage(img, p.x, p.y, o.iconSize[0], o.iconSize[1]);
+        }
+    }
+});
+
 const icons =
 {
     getIcon: function(erp, selected, inactive)

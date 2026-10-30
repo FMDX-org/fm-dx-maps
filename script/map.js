@@ -34,14 +34,17 @@ const map =
         this._data = ds.locations;
 
         this._clear();
-        for (let id in this._data)
+
+        const ids = Object.keys(this._data).sort((a, b) => this._data[b].lat - this._data[a].lat);
+        for (const id of ids)
         {
             const entry = this._data[id];
             if (!entry.hide &&
                 entry.lat && entry.lon)
             {
-                const marker = L.marker([entry.lat, entry.lon]);
-                marker.setIcon(icons.getIcon(entry['maxerp'], selection.contains(id), entry['inactive']));
+                const marker = new L.CanvasIconMarker([entry.lat, entry.lon], {
+                    icon: icons.getIcon(entry['maxerp'], selection.contains(id), entry['inactive'])
+                });
                 marker.bindTooltip(this.tooltip);
                 marker.on('mousedown', function (e)
                 {
@@ -159,7 +162,7 @@ const map =
             const entry = map._data[id];
             const marker = map._data[id].myMarker;
             marker.setIcon(icons.getIcon(entry['maxerp'], true, entry['inactive']));
-            marker.setZIndexOffset(entry['maxerp']);
+            marker.bringToFront();
         }
     },
 
@@ -227,7 +230,6 @@ const map =
             if (marker)
             {
                 marker.setIcon(icons.getIcon(data['maxerp'], false, data['inactive']));
-                marker.setZIndexOffset(data['maxerp']);
             }
 
             selection.remove(id);
